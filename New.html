@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Messaging Hat Box</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    label {
+        font-weight: bold;
+    }
+    textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .output {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+    .message {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Secure Messaging Hat Box</h2>
+    <label for="message">Enter your message:</label>
+    <textarea id="message" placeholder="Type your message here..."></textarea>
+    <button onclick="sendMessage()">Send Message</button>
+
+    <div class="output">
+        <h3>Received Messages:</h3>
+        <div id="receivedMessages"></div>
+    </div>
+</div>
+
+<script>
+    // Array to store messages
+    var messages = [];
+
+    // Function to convert message to binary
+    function textToBinary(message) {
+        return message.split('').map(char => {
+            return char.charCodeAt(0).toString(2).padStart(8, '0');
+        }).join(' ');
+    }
+
+    // Function to convert binary to message
+    function binaryToText(binaryMessage) {
+        return binaryMessage.split(' ').map(binary => {
+            return String.fromCharCode(parseInt(binary, 2));
+        }).join('');
+    }
+
+    function sendMessage() {
+        var messageInput = document.getElementById('message');
+        var message = messageInput.value.trim();
+        if (message === '') {
+            alert('Please enter a message.');
+            return;
+        }
+
+        // Convert message to binary
+        var binaryMessage = textToBinary(message);
+
+        // Save the message with current timestamp
+        var timestamp = new Date().toLocaleString();
+        messages.push({ message: binaryMessage, timestamp: timestamp });
+
+        // Update UI to display messages
+        displayMessages();
+
+        // Clear message input
+        messageInput.value = '';
+    }
+
+    function displayMessages() {
+        var receivedMessagesDiv = document.getElementById('receivedMessages');
+        receivedMessagesDiv.innerHTML = '';
+
+        // Display each message with timestamp
+        messages.forEach(msg => {
+            var messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.innerHTML = `<strong>${msg.timestamp}:</strong> ${msg.message}`;
+            receivedMessagesDiv.appendChild(messageDiv);
+        });
+    }
+</script>
+
+</body>
+</html>
