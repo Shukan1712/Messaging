@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <!-- Add the Bootstrap CSS via the CDN (content delivery network) method -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>COSC 122 Lab 4 Index Page for Task 5</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-white" href="index.html">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Index</a>
+                </li>
+                <!-- Add other navigation links here -->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Left-aligned Image -->
+            <div class="col-12 col-md-6 text-center">
+                <img src="pexels-cottonbro-studio-3693108.jpg" alt="Vinyl Record" class="img-fluid">
+            </div>
+            <!-- Right-aligned Textbox with "Taylor Swift" button and Tagline -->
+            <div class="col-12 col-md-6">
+                <div class="text-right">
+                    <h3>Music and Taylor Swift</h3>
+                    <p>Music is very important to me. I enjoy classic music and classic ways of listening to music, like on vinyl as the image depicts. My favorite modern artist is Taylor Swift. She also has a love for record players, and offers all of her music on them.</p>
+                    <a href="https://www.taylorswift.com/" class="btn btn-primary">Taylor Swift</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Green Bar with Inspirational Quote -->
+    <div class="container-fluid mt-4 bg-success text-center text-white py-3">
+        <p>"Draw the cat eye sharp enough to kill a man" - Taylor Swift</p>
+    </div>
+
+    <!-- "My Interests" Heading -->
+    <div class="container mt-4">
+        <h2 class="text-left">My Interests</h2>
+    </div>
+
+    <div class="container mt-2">
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="pexels-lisa-fotios-3353621.jpg" alt="Thrifting/Vintage">
+                <div class="card-body">
+                    <h5 class="card-title">Thrifting/Vintage Shopping</h5>
+                    <p class="card-text">I love going to thrift and vintage stores. I love that every piece of clothing or decoration has an unknown history to me. I also love how everything is completely unique.</p>
+                    <a href="https://www.minimizemymess.com/blog/benefits-of-thrifting" class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="pexels-esther-höfling-17738488.jpg" alt="The Beach">
+                <div class="card-body">
+                    <h5 class="card-title">The Beach</h5>
+                    <p class="card-text">I love the beach because it reminds me of home. I grew up in Victoria, BC, minutes away from the ocean and I have so many amazing memories there.</p>
+                    <a href="https://www.webmd.com/mental-health/mental-health-benefits-of-the-beach" class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="pexels-harrison-haines-3536216.jpg" alt="Fall/Autumn">
+                <div class="card-body">
+                    <h5 class="card-title">Fall/Autumn</h5>
+                    <p class="card-text">Fall is my favorite season because it feels nostalgic and comforting. I love getting to wear winter clothing again and watching the leaves change colors.</p>
+                    <a href="https://www.awpnow.com/main/2021/09/28/reasons-why-autumn-is-the-best-season/#:~:text=Autumn%20is%20a%20great%20time,of%20comfort%2C%20warmth%20and%20reflection." class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get in Touch Section -->
+    <div class="container mt-4 text-center">
+        <h2>Get in Touch</h2>
+        <p>Questions? Do not hesitate to contact us.</p>
+    </div>
+
+    <!-- Sticky Footer Bar -->
+    <footer class="fixed-bottom bg-dark text-white text-center py-2">
+        <p>Eve McGregor | 2023 | All content on this site (unless otherwise specified) is licensed under the CC BY-NC-SA 4.0 license</p>
+    </footer>
+</body>
+
+</html>
