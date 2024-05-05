@@ -10,10 +10,12 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            height: 100vh; /* Optional: Center vertically within viewport */
+            min-height: 100vh; /* Changed height to min-height */
+            padding: 20px; /* Added padding for spacing */
         }
         .content-container {
-            max-width: 600px; /* Adjust as needed */
+            width: 90%; /* Adjusted width to 90% */
+            max-width: 600px;
             text-align: left;
             margin-left: auto;
             margin-right: auto;
@@ -24,20 +26,22 @@
         .button-container button {
             margin-right: 10px;
         }
+        img {
+            max-width: 100%; /* Ensures the image doesn't overflow */
+            height: auto; /* Maintains aspect ratio */
+        }
     </style>
 </head>
 <body>
     <div class="center-content">
         <div class="content-container">
-            <dr><dr><dr><dr><dr>
-            <img src="https://i.imgur.com/jVP74D2.png" alt="Company Logo" width="600" style="display: block; margin: 0 auto;">
+            <img src="https://i.imgur.com/jVP74D2.png" alt="Company Logo" style="display: block; margin: 0 auto;">
             <h1 style="color: rgb(0, 0, 0);">ABOUT US</h1>
             <p style="color: black;">Welcome to SMS Glass, where craftsmanship meets innovation. Established four years ago, SMS Glass has been dedicated to providing top-notch glass solutions for residential and commercial needs. Our journey began with a vision to redefine the standards of quality and service in the glass industry, and today, we stand proud as a trusted name in the market.</p>
             <p style="color: black;">At SMS Glass, we understand that every project is unique, and that's why we offer a diverse range of glass products and services tailored to meet your specific requirements. Whether you're looking for elegant glass installations to enhance the aesthetics of your home or robust solutions to elevate your commercial space, we've got you covered!</p>
             <p style="color: black;">Our team comprises skilled artisans and industry experts who are passionate about their craft. With years of experience and a commitment to excellence, they ensure that each project is executed with precision and attention to detail. From custom glass designs to efficient installations, we strive to exceed your expectations at every step of the process. Customer satisfaction is our top priority. We believe in building long-lasting relationships with our clients based on trust, transparency, and reliability. From the initial consultation to the final installation, we ensure open communication and personalized attention, ensuring that your vision is brought to life seamlessly.</p>
             <p style="color: black;">At SMS Glass, we're not just in the business of glass – we're in the business of transforming spaces and making dreams a reality. Discover the difference with SMS Glass and experience the beauty and versatility of glass like never before.</p>
             <p style="color: black;"> Thank you for choosing SMS Glass – where every project is a masterpiece!</p>
-
 
             <div class="button-container">
                 <button onclick="showResidential()">Residential</button>
