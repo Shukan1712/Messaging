@@ -15,6 +15,14 @@
         .content-container {
             max-width: 600px; /* Adjust as needed */
             text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -25,10 +33,31 @@
             <h1 style="color: rgb(0, 0, 0);">ABOUT US</h1>
             <p style="color: black;">Welcome to SMS Glass, where craftsmanship meets innovation. Established four years ago, SMS Glass has been dedicated to providing top-notch glass solutions for residential and commercial needs. Our journey began with a vision to redefine the standards of quality and service in the glass industry, and today, we stand proud as a trusted name in the market.</p>
             <p style="color: black;">At SMS Glass, we understand that every project is unique, and that's why we offer a diverse range of glass products and services tailored to meet your specific requirements. Whether you're looking for elegant glass installations to enhance the aesthetics of your home or robust solutions to elevate your commercial space, we've got you covered!</p>
-            <p style="color: black;">Our team comprises skilled artisans and industry experts who are passionate about their craft. With years of experience and a commitment to excellence, they ensure that each project is executed with precision and attention to detail. From custom glass designs to efficient installations, we strive to exceed your expectations at every step of the process. Customer satisfaction is our top priority. We believe in building long-lasting relationships with our clients based on trust, transparency, and reliability. From the initial consultation to the final installation, we ensure open communication and personalized attention, ensuring that your vision is brought to life seamlessly.</p>
-            <p style="color: black;">At SMS Glass, we're not just in the business of glass – we're in the business of transforming spaces and making dreams a reality. Discover the difference with SMS Glass and experience the beauty and versatility of glass like never before.</p>
-            <p style="color: black;">Thank you for choosing SMS Glass – where every project is a masterpiece!</p>
+            <div class="button-container">
+                <button onclick="showResidential()">Residential</button>
+                <button onclick="showCommercial()">Commercial</button>
+            </div>
+            <div id="residential-content" style="display: none;">
+                <h2 style="color: rgb(0, 0, 0);">Residential</h2>
+                <p style="color: black;">SMS Glass Ltd. offers full-service residential glass repair. Because a window consists of more than just glass, we have developed an extensive network of suppliers. This helps us to ensure that we can handle any repair or servicing that may be required. Our knowledgeable staff can address your questions and in most circumstances provide a comprehensive estimate over the phone. All double glazed window panels carry a 5-year manufacturer limited warranty from respected brands with an option for a 10-year warranty available. Call SMS Glass for terms and conditions on the limited warranty. Our onsite service vehicles are kept well-stocked for standard repairs and servicing, and are backed by our parts department and a network of suppliers. Our onsite services are available 6 days a week.</p>
+            </div>
+            <div id="commercial-content" style="display: none;">
+                <h2 style="color: rgb(0, 0, 0);">Commercial</h2>
+                <p style="color: black;">At SMS Glass, our staff are experienced in all types of glazing systems, from high-rise technical glazing to storefronts and entries. Our technicians are trained and certified on suspended platforms, Boson’s chair, and scissor lifts/boom lifts. With well-equipped service vehicles and the ability to facilitate 24-hour emergency calls, SMS Glass can solve all your glazing needs.</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function showResidential() {
+            document.getElementById("residential-content").style.display = "block";
+            document.getElementById("commercial-content").style.display = "none";
+        }
+
+        function showCommercial() {
+            document.getElementById("residential-content").style.display = "none";
+            document.getElementById("commercial-content").style.display = "block";
+        }
+    </script>
 </body>
 </html>
